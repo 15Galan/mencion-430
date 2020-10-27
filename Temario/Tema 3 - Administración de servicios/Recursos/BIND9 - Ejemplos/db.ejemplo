@@ -1,0 +1,24 @@
+;
+; A continuación aparecen los parámetros relacionados con la actualización del DNS (número de
+; serie y periodos de actuación).
+$TTL	604800
+@	IN	SOA	ejemplo.uma. root.ejemplo.uma. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+; Las dos siguientes líneas indican quien es el servidor primario (NS = Name Server) y quien procesa 
+; el correo electrónico del dominio (MX = MAil eXchange).  
+@	IN	NS	dns.ejemplo.uma.
+@	IN	MX    0 mail.ejemplo.uma.
+
+; Las siguientes líneas especifican las IPs
+@	IN	A	10.0.2.15 ; IP de ejemplo.uma
+mail IN	A	10.0.2.16 ; IP de mail.ejemplo.uma
+dns	IN	A	10.0.2.15 ; IP de dns.ejemplo.uma
+www	IN	A	10.0.2.15 ; IP de www.ejemplo.uma
+
+; La siguiente línea espeficia un alias alias.ejemplo.uma -> ejemplo.uma
+alias	IN	CNAME	ejemplo.uma.
