@@ -1,0 +1,9 @@
+Package: paquete-ejemplo
+Version: 0.1
+Architecture: all
+Maintainer: Galán <antoniogalanG15@gmail.com>
+Installed-Size: 100
+Section: devel
+Priority: optional
+Description: Ejemplo
+
