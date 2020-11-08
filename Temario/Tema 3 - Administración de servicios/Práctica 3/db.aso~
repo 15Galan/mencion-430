@@ -1,0 +1,38 @@
+; A continuación aparecen los parámetros relacionados con
+; la actualización del DNS (número de serie y periodos de actuación)
+
+$TTL	604800
+@	IN	SOA	aso.com. hostmaster.aso.com (
+			      2  ; Serial
+			 604800  ; Refresh
+			  86400	 ; Retry
+			2419200	 ; Expire
+			604800 ) ; Negative Cache TTL
+
+
+; Las dos siguientes líneas indican quien es el servidor primario
+; (NS = Name Server) y quien procesa el correo electrónico del
+; dominio (MX = Mail eXchange)
+
+@	IN	NS		dns.aso.uma.
+@	IN	MX	10	mail.aso.uma.
+
+
+; Las siguientes líneas especifican las IPs
+
+pc1	IN	A	10.0.2.15	; \
+pc2	IN	A	10.0.2.16	;  \
+pc3	IN	A	10.0.2.17	; IPs de los diferentes
+pc4	IN	A	10.0.2.18	; ordenadores del aula
+pc5	IN	A	10.0.2.19	;  /
+pc6	IN	A	10.0.2.20	; /
+ 
+www	IN	A	10.0.2.21 	; IP de www.aso.uma
+mail 	IN	A	10.0.2.22 	; IP de mail.aso.uma
+dns	IN	A	10.0.2.22 	; IP de dns.aso.uma
+
+
+; La siguiente línea espeficia un alias,
+; por ejemplo: alias.ejemplo.uma -> ejemplo.uma
+alias	IN	CNAME	2021.aso.uma
+

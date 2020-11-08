@@ -1,0 +1,24 @@
+; BIND reverse data file for 10.0.2.0
+
+$TTL	604800
+@	IN	SOA	aso.uma. hostmaster.aso.uma. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+
+
+; Direcciones
+
+@	IN	NS	dns.aso.uma.
+15	IN	PTR	aula5pc1.aso.uma.
+16	IN	PTR	aula5pc2.aso.uma.
+17	IN	PTR	aula5pc3.aso.uma.
+18	IN	PTR	aula5pc4.aso.uma.
+19	IN	PTR	aula5pc5.aso.uma.
+20	IN	PTR	aula5pc6.aso.uma.
+21	IN	PTR	www.aso.uma.
+22	IN	PTR	mail.aso.uma.
+22	IN	PTR	dns.aso.uma.
+
