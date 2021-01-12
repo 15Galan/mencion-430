@@ -1,0 +1,52 @@
+#!/bin/bash
+
+
+# Definición de la función
+# sumarDivisores () {
+#     let suma=0
+    
+#     for i in $(seq 1 1 $(($1-1))); do
+#         if [ $(($1%$i)) -eq 0 ]; then
+#             suma=$((suma+$i))
+#         fi
+#     done
+    
+#     echo $suma
+    
+#     return $suma
+# }
+
+
+
+# Inicio del script
+
+# Inicializar variables (int)
+let k=$1
+let s=0
+let c=0
+
+# Mostrar información
+echo "El término k es: "$k
+echo "La sucesión alicuota es:"
+
+# Cálculo
+while [ $k -ne 1 ] && [ $c -le 10 ]; do
+    for i in $(seq 1 1 $(($k-1))); do
+        if [ $(($k%$i)) -eq 0 ]; then
+            s=$((s+$i))
+        fi
+    done
+    
+    if [ $s -eq $k ] || [ $c -eq 10 ]; then
+        echo "Infinita"
+        c=100
+    else
+        echo $s
+        
+        # Actualizar variables
+        k=$s
+        s=0
+        c=$((c+1))
+    fi
+done
+
