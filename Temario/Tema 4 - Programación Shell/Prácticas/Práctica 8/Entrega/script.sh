@@ -20,10 +20,11 @@
 
 # Inicio del script
 
-# Inicializar variables (int)
-let k=$1
-let s=0
-let c=0
+# Inicializar variables
+let k=$1    # int
+let s=0     # int
+let c=0     # int
+res=""      # string
 
 # Mostrar información
 echo "El término k es: "$k
@@ -38,10 +39,12 @@ while [ $k -ne 1 ] && [ $c -le 10 ]; do
     done
     
     if [ $s -eq $k ] || [ $c -eq 10 ]; then
-        echo "Infinita"
+        res=$res" Infinita"
         c=100
+        
     else
-        echo $s
+        # Alamacenar resultado
+        res=$res" "$s
         
         # Actualizar variables
         k=$s
@@ -49,4 +52,6 @@ while [ $k -ne 1 ] && [ $c -le 10 ]; do
         c=$((c+1))
     fi
 done
+
+echo $res
 
